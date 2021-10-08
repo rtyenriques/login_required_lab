@@ -4,8 +4,9 @@ class SecretsController < ApplicationController
 
   
     def show
-        if session[:name].nil?
+        if current_user.nil?
             redirect_to '/login'
+
 
         end
 
